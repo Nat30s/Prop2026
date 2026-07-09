@@ -4,7 +4,7 @@
 - Date - 24 May 26
 - AI Used - Claude
 #### Changes List
-- Interlink to specific note section via #H Tags
+- CRM contact placeholder added
 
 - - -
 
