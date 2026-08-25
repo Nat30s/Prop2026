@@ -4,15 +4,6 @@
 
 
 
-
-# v1b
-- Date - 25 Aug 26
-- AI Used - Claude
-#### Changes List
--  Built a static projects page, instead of dynamic
-
----
-
 # v1a
 - Date - 2 Jun 26
 - AI Used - Claude
