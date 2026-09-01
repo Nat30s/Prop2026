@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "date": "10 Jan 2026",
+    "category": "Buying Guide",
+    "title": "5 Things to Check Before Buying in New Chandigarh",
+    "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1200",
+    "excerpt": "A quick, practical guide to what actually matters when shortlisting a property in the Chandigarh Tricity region.",
+    "link": "blog/blog-post.html"
+  },
+  {
+    "id": "2",
+    "date": "3 Feb 2026",
+    "category": "Market Trends",
+    "title": "Why New Chandigarh Prices Rose 18% This Year",
+    "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200",
+    "excerpt": "A look at the demand drivers behind the recent price movement across the Tricity micro-markets.",
+    "link": "blog/price-trends-2026.html"
+  },
+  {
+    "id": "3",
+    "date": "21 Mar 2026",
+    "category": "Rental Guide",
+    "title": "Should You Rent or Buy in Zirakpur Right Now?",
+    "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=1200",
+    "excerpt": "Breaking down the real cost comparison for Zirakpur's fastest-growing residential pockets.",
+    "link": "blog/rent-vs-buy-zirakpur.html"
+  },
+  {
+    "id": "4",
+    "date": "",
+    "category": "Legal",
+    "title": "Understanding RERA Timelines Before You Sign",
+    "image": "",
+    "excerpt": "",
+    "link": "blog/rera-timelines.html"
+  }
+]
