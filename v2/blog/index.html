@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ══════════════════════════════════════════════════════════════
+     ## SEO META
+     ══════════════════════════════════════════════════════════════ -->
+<title>Blog — Realnest</title>
+<meta name="description" content="Insights, guides and market updates for buyers, renters and investors in the Chandigarh Tricity region.">
+<link rel="canonical" href="https://www.realnest.example/blog/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog — Realnest">
+<meta property="og:description" content="Insights, guides and market updates for buyers, renters and investors in the Chandigarh Tricity region.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1200">
+<meta property="og:url" content="https://www.realnest.example/blog/">
+<meta property="og:site_name" content="Realnest">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; color: #1a1a1a; scroll-behavior: smooth; }
+
+    .section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #9ca3af; margin-bottom: 16px; }
+
+    .breadcrumb a { color: #9ca3af; }
+    .breadcrumb a:hover { color: #000; }
+
+    /* ── Category pills (sidebar) ── */
+    .cat-pill { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border-radius: 999px; font-size: 13px; font-weight: 500; color: #4b5563; transition: all 0.15s ease; cursor: pointer; border: none; background: none; width: 100%; text-align: left; }
+    .cat-pill:hover { background: #f3f4f6; color: #000; }
+    .cat-pill.active { background: #000; color: #fff; }
+
+    /* ── Mobile category scroller ── */
+    .cat-pill-mobile { font-size: 12px; font-weight: 600; padding: 8px 16px; border-radius: 999px; white-space: nowrap; background: #f3f4f6; color: #4b5563; border: none; cursor: pointer; }
+    .cat-pill-mobile.active { background: #000; color: #fff; }
+
+    /* ── Post cards ── */
+    .post-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .post-card:hover .post-card-img { transform: scale(1.04); }
+    .post-card-img { transition: transform 0.4s ease; }
+
+    /* ── Featured mosaic overlay ── */
+    .feature-overlay { background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.75) 100%); }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
+</style>
+</head>
+<body class="antialiased">
+
+    <!-- ══════════════════════════════════════════════════════════════
+         ## HEADER / NAVIGATION — shared across site, links are relative (../)
+         ══════════════════════════════════════════════════════════════ -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-2 font-bold text-xl cursor-pointer">
+                <div class="w-8 h-8 bg-black rounded-full flex items-center justify-center text-white text-xs font-black">RN</div>
+                Realnest <span class="text-[10px] font-normal bg-gray-100 px-2 py-0.5 rounded-full ml-1">Tricity</span>
+            </a>
+            <nav class="hidden md:flex gap-10 text-sm font-medium text-gray-500 items-center">
+                <a href="../index.html" class="hover:text-black transition-colors">Buy</a>
+                <a href="../index.html" class="hover:text-black transition-colors">Rent</a>
+                <a href="../listings.html" class="hover:text-black transition-colors">Listings</a>
+                <a href="../projects/index.html" class="hover:text-black transition-colors">New Projects</a>
+                <a href="../index.html" class="hover:text-black transition-colors">Shortlisted</a>
+            </nav>
+            <button class="bg-black text-white px-7 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-800 transition-colors shadow-lg shadow-black/10">Post Property</button>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-10">
+
+        <!-- ══════════════════════════════════════════════════════════════
+             ## BREADCRUMB
+             ══════════════════════════════════════════════════════════════ -->
+        <nav class="breadcrumb flex items-center gap-2 text-xs font-medium mb-8" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a>
+            <span class="text-gray-300">/</span>
+            <span class="text-black font-semibold">Blog</span>
+        </nav>
+
+        <!-- ══════════════════════════════════════════════════════════════
+             ## PAGE INTRO
+             ══════════════════════════════════════════════════════════════ -->
+        <div class="max-w-2xl mb-12">
+            <p class="section-label mb-3">Realnest Blog</p>
+            <h1 class="text-3xl md:text-[2.5rem] font-bold leading-tight tracking-tight mb-4">Insights on the Tricity market</h1>
+            <p class="text-gray-500 text-base leading-relaxed">Buying guides, project reviews and market notes for New Chandigarh, Mohali and Panchkula — written to save you a few wrong turns.</p>
+        </div>
+
+        <!-- ══════════════════════════════════════════════════════════════
+             ## FEATURED MOSAIC — populated once from blog.json (latest posts),
+             does NOT respond to category filtering below
+             ══════════════════════════════════════════════════════════════ -->
+        <section id="mosaic" class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-16">
+            <!-- JS renders: 1 large card (md:col-span-2) + 2 stacked smaller cards -->
+        </section>
+
+        <!-- ══════════════════════════════════════════════════════════════
+             ## CATEGORY RAIL + POST GRID — both driven by blog.json
+             ══════════════════════════════════════════════════════════════ -->
+        <section class="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-12">
+
+            <!-- Left rail: categories, built dynamically from JSON -->
+            <aside class="hidden md:block">
+                <p class="section-label">Categories</p>
+                <div id="cat-rail" class="flex flex-col gap-1">
+                    <!-- JS renders pills here -->
+                </div>
+            </aside>
+
+            <!-- Mobile category scroller -->
+            <div id="cat-rail-mobile" class="md:hidden flex gap-2 overflow-x-auto pb-2 -mx-6 px-6 mb-2">
+                <!-- JS renders pills here -->
+            </div>
+
+            <!-- Post grid: 2 columns desktop -->
+            <div id="post-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12">
+                <!-- JS renders cards here -->
+            </div>
+        </section>
+
+        <p id="empty-state" class="hidden text-center text-gray-400 text-sm py-16">No posts in this category yet.</p>
+
+    </main>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         ## FOOTER — shared across site
+         ══════════════════════════════════════════════════════════════ -->
+    <footer class="border-t border-gray-100 mt-10 pt-16 pb-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+            <div class="col-span-2">
+                <div class="flex items-center gap-2 font-bold text-xl mb-3">
+                    <div class="w-8 h-8 bg-black rounded-full flex items-center justify-center text-white text-xs font-black">RN</div>
+                    Realnest
+                </div>
+                <p class="text-gray-400 text-sm max-w-xs">Real estate, made simple for the Chandigarh Tricity region.</p>
+            </div>
+            <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">Explore</p>
+                <ul class="space-y-3 text-sm text-gray-500">
+                    <li><a href="../listings.html" class="hover:text-black">Listings</a></li>
+                    <li><a href="../projects/index.html" class="hover:text-black">New Projects</a></li>
+                    <li><a href="index.html" class="hover:text-black">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">Support</p>
+                <ul class="space-y-3 text-sm text-gray-500">
+                    <li><a href="../index.html" class="hover:text-black">Contact Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 pt-10 border-t border-gray-50 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-gray-400 text-xs">©2025 Realnest. All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         ## DATA + RENDER LOGIC
+         Reads /blog/blog.json (same folder as this file).
+         - Incomplete entries (missing image/date/excerpt) are skipped entirely.
+         - "link" values come as "blog/xyz.html" (root-relative, meant for pages
+           outside /blog/); since this page already lives in /blog/, we strip
+           the leading "blog/" so links resolve correctly from here.
+         - Mosaic = latest 2 posts, rendered once, never re-rendered by filters.
+         - Grid + category pills re-render on pill click; mosaic is untouched.
+         ══════════════════════════════════════════════════════════════ -->
+    <script>
+    (async function () {
+        const mosaicEl = document.getElementById('mosaic');
+        const railEl = document.getElementById('cat-rail');
+        const railMobileEl = document.getElementById('cat-rail-mobile');
+        const gridEl = document.getElementById('post-grid');
+        const emptyEl = document.getElementById('empty-state');
+
+        function fixLink(link) {
+            return (link || '#').replace(/^blog\//, '');
+        }
+
+        function isComplete(post) {
+            return Boolean(post.image && post.date && post.excerpt && post.title);
+        }
+
+        function cardHTML(post) {
+            return `
+                <a href="${fixLink(post.link)}" class="post-card block group">
+                    <div class="rounded-[1.5rem] overflow-hidden h-[200px] mb-4 bg-gray-100">
+                        <img src="${post.image}" class="post-card-img w-full h-full object-cover" alt="${post.title}">
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400">${post.category}</span>
+                    <h3 class="text-base font-bold leading-snug mt-2 mb-2 group-hover:underline underline-offset-2">${post.title}</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed mb-3">${post.excerpt}</p>
+                    <div class="flex items-center gap-3 text-xs text-gray-400 font-medium">
+                        <span>Realnest Editorial</span>
+                        <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                        <span>${post.date}</span>
+                    </div>
+                </a>`;
+        }
+
+        function largeMosaicHTML(post) {
+            return `
+                <a href="${fixLink(post.link)}" class="post-card md:col-span-2 relative rounded-[2rem] overflow-hidden h-[320px] md:h-[440px] block group bg-gray-100">
+                    <img src="${post.image}" class="post-card-img w-full h-full object-cover" alt="${post.title}">
+                    <div class="feature-overlay absolute inset-0"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-7 md:p-9">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-wider bg-white text-black px-3 py-1.5 rounded-full">${post.category}</span>
+                        </div>
+                        <h2 class="text-white text-xl md:text-2xl font-bold leading-snug mb-2 max-w-lg">${post.title}</h2>
+                        <p class="text-gray-200 text-sm mb-4 max-w-md hidden md:block">${post.excerpt}</p>
+                        <div class="flex items-center gap-3 text-xs text-gray-300 font-medium">
+                            <span>Realnest Editorial</span>
+                            <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
+                            <span>${post.date}</span>
+                        </div>
+                    </div>
+                </a>`;
+        }
+
+        function smallMosaicHTML(post) {
+            return `
+                <a href="${fixLink(post.link)}" class="post-card relative rounded-[2rem] overflow-hidden h-[152px] md:h-[210px] block group bg-gray-100">
+                    <img src="${post.image}" class="post-card-img w-full h-full object-cover" alt="${post.title}">
+                    <div class="feature-overlay absolute inset-0"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5">
+                        <span class="text-[9px] font-bold uppercase tracking-wider bg-white text-black px-2.5 py-1 rounded-full inline-block mb-2">${post.category}</span>
+                        <h3 class="text-white text-sm font-bold leading-snug">${post.title}</h3>
+                    </div>
+                </a>`;
+        }
+
+        function renderMosaic(posts) {
+            const latest = posts.slice(0, 3); // 1 large + up to 2 small
+            if (latest.length === 0) { mosaicEl.innerHTML = ''; return; }
+            let html = largeMosaicHTML(latest[0]);
+            if (latest.length > 1) {
+                html += `<div class="flex flex-col gap-5">`;
+                html += latest.slice(1, 3).map(smallMosaicHTML).join('');
+                html += `</div>`;
+            }
+            mosaicEl.innerHTML = html;
+        }
+
+        function renderGrid(posts) {
+            gridEl.innerHTML = posts.map(cardHTML).join('');
+            emptyEl.classList.toggle('hidden', posts.length > 0);
+        }
+
+        function renderCategoryPills(categories, active, onSelect) {
+            const all = ['All Posts', ...categories];
+            railEl.innerHTML = all.map(cat => `
+                <button class="cat-pill ${cat === active ? 'active' : ''}" data-cat="${cat}">
+                    <span>${cat}</span>
+                </button>`).join('');
+            railMobileEl.innerHTML = all.map(cat => `
+                <button class="cat-pill-mobile ${cat === active ? 'active' : ''}" data-cat="${cat}">${cat}</button>`).join('');
+
+            [...railEl.querySelectorAll('.cat-pill'), ...railMobileEl.querySelectorAll('.cat-pill-mobile')]
+                .forEach(btn => btn.addEventListener('click', () => onSelect(btn.dataset.cat)));
+        }
+
+        try {
+            const res = await fetch('blog.json');
+            const raw = await res.json();
+
+            // Sort newest first (skip unparsable/empty dates safely)
+            const parsed = raw.map(p => ({ ...p, _time: p.date ? Date.parse(p.date) : NaN }));
+            parsed.sort((a, b) => (b._time || 0) - (a._time || 0));
+
+            const complete = parsed.filter(isComplete);
+
+            renderMosaic(complete);
+
+            const categories = [...new Set(complete.map(p => p.category))];
+            let activeCategory = 'All Posts';
+
+            function applyFilter() {
+                const filtered = activeCategory === 'All Posts'
+                    ? complete
+                    : complete.filter(p => p.category === activeCategory);
+                renderGrid(filtered);
+                renderCategoryPills(categories, activeCategory, (cat) => {
+                    activeCategory = cat;
+                    applyFilter();
+                });
+            }
+
+            applyFilter();
+        } catch (err) {
+            console.error('Could not load blog.json', err);
+            mosaicEl.innerHTML = '';
+            gridEl.innerHTML = '';
+            emptyEl.textContent = 'Posts could not be loaded right now.';
+            emptyEl.classList.remove('hidden');
+        }
+    })();
+    </script>
+
+</body>
+</html>

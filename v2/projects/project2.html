@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ══════════════════════════════════════════════════════════════
+     ## SEO META — edit per project
+     ══════════════════════════════════════════════════════════════ -->
+<title>Godrej Aristocrat | Sector 33, Mullanpur — Realnest</title>
+<meta name="description" content="Godrej Aristocrat in Sector 33, Mullanpur, New Chandigarh. 2, 3 & 4 BHK apartments starting ₹1.45 Cr. RERA registered. Possession Dec 2027. Enquire now.">
+<link rel="canonical" href="https://www.realnest.example/projects/godrej-project.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="product">
+<meta property="og:title" content="Godrej Aristocrat | Sector 33, Mullanpur — Realnest">
+<meta property="og:description" content="2, 3 & 4 BHK apartments by Godrej Properties in New Chandigarh. Starting ₹1.45 Cr. RERA: PBRERA-SAS80-PR-0000-2025.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1200">
+<meta property="og:url" content="https://www.realnest.example/projects/godrej-project.html">
+<meta property="og:site_name" content="Realnest">
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Residence",
+  "name": "Godrej Aristocrat",
+  "description": "Godrej Aristocrat brings the trusted Godrej legacy to New Chandigarh with a landmark residential development set against the Shivalik backdrop.",
+  "url": "https://www.realnest.example/projects/godrej-project.html",
+  "image": [
+    "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1200"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sector 33, Mullanpur",
+    "addressLocality": "New Chandigarh",
+    "addressRegion": "Punjab",
+    "addressCountry": "IN"
+  },
+  "developer": {
+    "@type": "Organization",
+    "name": "Godrej Properties"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "INR",
+    "lowPrice": "14500000",
+    "highPrice": "32000000"
+  }
+}
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; color: #1a1a1a; scroll-behavior: smooth; }
+
+    .custom-shadow { box-shadow: 0 10px 40px rgba(0,0,0,0.04); }
+
+    .progress-track { background: #e5e7eb; border-radius: 99px; height: 4px; overflow: hidden; }
+    .progress-fill  { background: #000; height: 100%; border-radius: 99px; transition: width 0.6s ease; }
+
+    .badge-launch    { background: #000; color: #fff; }
+    .badge-under     { background: #fef3c7; color: #92400e; }
+    .badge-nearing   { background: #d1fae5; color: #065f46; }
+    .badge-presale   { background: #ede9fe; color: #5b21b6; }
+
+    .section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #9ca3af; margin-bottom: 16px; }
+
+    .info-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 0.5px solid #f3f4f6; }
+    .info-label { font-size: 11px; font-weight: 600; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; flex-shrink: 0; margin-right: 12px; }
+    .info-value { font-size: 13px; font-weight: 500; color: #1a1a1a; text-align: right; }
+
+    .amenity-pill { display: inline-flex; align-items: center; gap: 6px; background: #f7f7f7; border: 0.5px solid #e5e7eb; border-radius: 99px; padding: 6px 14px; font-size: 11px; font-weight: 600; color: #4b5563; }
+
+    .gallery-thumb { transition: all 0.2s ease; cursor: pointer; opacity: 0.6; }
+    .gallery-thumb:hover, .gallery-thumb.active { opacity: 1; border-color: #000; }
+
+    .form-input { width: 100%; padding: 10px 14px; border: 1px solid #e5e7eb; border-radius: 12px; font-size: 13px; font-family: 'Inter', sans-serif; background: #fafafa; color: #1a1a1a; transition: border-color 0.2s, background 0.2s; }
+    .form-input:focus { outline: none; border-color: #000; background: #fff; }
+    .form-input::placeholder { color: #9ca3af; }
+    .form-label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #9ca3af; margin-bottom: 6px; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .form-success { text-align: center; padding: 24px 16px; animation: fadeInUp 0.4s ease; }
+    .btn-submitting { opacity: 0.6; pointer-events: none; }
+
+    input:focus, select:focus { outline: none; border-color: #000; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
+
+    .stat-pill { background: #f7f7f7; border: 0.5px solid #e5e7eb; border-radius: 12px; padding: 12px 16px; }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb a { color: #9ca3af; }
+    .breadcrumb a:hover { color: #000; }
+
+    /* ── Lightbox ── */
+    #lightbox { position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,0.8); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+    #lightbox.open { display: flex; }
+    #lightboxImg { max-width: 88vw; max-height: 82vh; object-fit: contain; cursor: zoom-in; transition: max-width 0.2s ease, max-height 0.2s ease; border-radius: 8px; }
+    #lightboxImg.zoomed { max-width: none; max-height: none; width: auto; height: auto; cursor: zoom-out; }
+    #lightboxImgWrap { max-width: 92vw; max-height: 86vh; overflow: auto; display: flex; align-items: center; justify-content: center; }
+    .lb-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 999px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s ease; }
+    .lb-btn:hover { background: rgba(255,255,255,0.25); }
+    #lbPrev { left: 16px; }
+    #lbNext { right: 16px; }
+    #lbClose { position: absolute; top: 20px; right: 20px; width: 40px; height: 40px; border-radius: 999px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s ease; }
+    #lbClose:hover { background: rgba(255,255,255,0.25); }
+    #lbCounter { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 6px 14px; border-radius: 999px; }
+    #lbCaption { position: absolute; top: 20px; left: 20px; color: #fff; font-size: 12px; font-weight: 700; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 6px 14px; border-radius: 999px; max-width: 60vw; }
+    .lightbox-trigger { cursor: pointer; }
+</style>
+</head>
+<body class="antialiased">
+
+    <!-- ══════════════════════════════════════════════════════════════
+         ## HEADER / NAVIGATION — shared across site, links are relative (../)
+         ══════════════════════════════════════════════════════════════ -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-2 font-bold text-xl cursor-pointer">
+                <div class="w-8 h-8 bg-black rounded-full flex items-center justify-center text-white text-xs font-black">RN</div>
+                Realnest <span class="text-[10px] font-normal bg-gray-100 px-2 py-0.5 rounded-full ml-1">Tricity</span>
+            </a>
+            <nav class="hidden md:flex gap-10 text-sm font-medium text-gray-500 items-center">
+                <a href="../index.html" class="hover:text-black transition-colors">Buy</a>
+                <a href="../index.html" class="hover:text-black transition-colors">Rent</a>
+                <a href="../listings.html" class="hover:text-black transition-colors">Listings</a>
+                <a href="../projects.html" class="hover:text-black transition-colors text-black border-b-2 border-black pb-1">New Projects</a>
+                <a href="../index.html" class="hover:text-black transition-colors">Shortlisted</a>
+            </nav>
+            <button class="bg-black text-white px-7 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-800 transition-colors shadow-lg shadow-black/10">Post Property</button>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-10">
+
+        <!-- ══════════════════════════════════════════════════════════════
+             ## BREADCRUMB — edit project name/link text only
+             ══════════════════════════════════════════════════════════════ -->
+        <nav class="breadcrumb flex items-center gap-2 text-xs font-medium mb-6" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a>
+            <span class="text-gray-300">/</span>
+            <a href="../projects.html">New Projects</a>
+            <span class="text-gray-300">/</span>
+            <span class="text-black font-semibold">Godrej Aristocrat</span>
+        </nav>
+
+        <!-- Back -->
+        <a href="../projects.html" class="flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-black mb-8 transition-colors group w-fit">
+            <div class="w-8 h-8 border border-gray-200 rounded-full flex items-center justify-center group-hover:border-black transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            </div>
+            Back to Projects
+        </a>
+
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+            <!-- Left: Images + info -->
+            <div class="lg:col-span-3">
+
+                <!-- ══════════════════════════════════════════════════════
+                     ## HERO / MAIN IMAGE — swap src + badge text per project
+                     ══════════════════════════════════════════════════════ -->
+                <div class="relative rounded-[2rem] overflow-hidden h-[420px] mb-4 bg-gray-100">
+                    <img id="mainImg" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover lightbox-trigger" alt="Godrej Aristocrat" onclick="openLightbox(galleryImages, activeThumb, galleryCaptions)">
+                    <div class="absolute top-5 left-5 badge-under px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider">Under Construction</div>
+                    <div class="absolute top-5 right-5 bg-white px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider text-gray-700 shadow-sm">✦ Featured</div>
+                </div>
+
+                <!-- ══════════════════════════════════════════════════════
+                     ## GALLERY SECTION — add/remove thumb blocks + matching setMainImage index
+                     ══════════════════════════════════════════════════════ -->
+                <div class="flex gap-3 mb-8 overflow-x-auto pb-2">
+                    <div class="gallery-thumb active lightbox-trigger rounded-xl overflow-hidden border-2 border-transparent h-14 w-20 flex-shrink-0" onclick="setMainImage('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1200', 0); openLightbox(galleryImages, 0, galleryCaptions)">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover" loading="lazy" alt="Godrej Aristocrat photo 1">
+                    </div>
+                    <div class="gallery-thumb lightbox-trigger rounded-xl overflow-hidden border-2 border-transparent h-14 w-20 flex-shrink-0" onclick="setMainImage('https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&q=80&w=1200', 1); openLightbox(galleryImages, 1, galleryCaptions)">
+                        <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover" loading="lazy" alt="Godrej Aristocrat photo 2">
+                    </div>
+                    <div class="gallery-thumb lightbox-trigger rounded-xl overflow-hidden border-2 border-transparent h-14 w-20 flex-shrink-0" onclick="setMainImage('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=80&w=1200', 2); openLightbox(galleryImages, 2, galleryCaptions)">
+                        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover" loading="lazy" alt="Godrej Aristocrat photo 3">
+                    </div>
+                    <div class="gallery-thumb lightbox-trigger rounded-xl overflow-hidden border-2 border-transparent h-14 w-20 flex-shrink-0" onclick="setMainImage('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=1200', 3); openLightbox(galleryImages, 3, galleryCaptions)">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover" loading="lazy" alt="Godrej Aristocrat photo 4">
+                    </div>
+                </div>
+
+                <!-- ══════════════════════════════════════════════════════
+                     ## ABOUT SECTION
+                     ══════════════════════════════════════════════════════ -->
+                <div class="mb-8">
+                    <p class="section-label">About this project</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">Godrej Aristocrat brings the trusted Godrej legacy to New Chandigarh with a landmark residential development set against the Shivalik backdrop. Offering 2, 3, and 4 BHK residences across two iconic towers, each unit is designed with cross-ventilation, large balconies, and Italian marble finishes. A 2-acre central greens, Olympic-size pool, and a 30,000 sq. ft. clubhouse complete the experience.</p>
+                </div>
+
+                <!-- ══════════════════════════════════════════════════════
+                     ## KEY HIGHLIGHTS SECTION — add/remove divs as needed
+                     ══════════════════════════════════════════════════════ -->
+                <div class="mb-8">
+                    <p class="section-label">Key Highlights</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="flex items-center gap-2 text-sm font-medium text-gray-700">
+                            <div class="w-4 h-4 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-2 h-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            Shivalik View Towers
+                        </div>
+                        <div class="flex items-center gap-2 text-sm font-medium text-gray-700">
+                            <div class="w-4 h-4 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-2 h-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            RERA Registered
+                        </div>
+                        <div class="flex items-center gap-2 text-sm font-medium text-gray-700">
+                            <div class="w-4 h-4 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-2 h-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            Godrej Certified Construction
+                        </div>
+                        <div class="flex items-center gap-2 text-sm font-medium text-gray-700">
+                            <div class="w-4 h-4 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-2 h-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            Zero Maintenance First 3 Years
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ══════════════════════════════════════════════════════
+                     ## AMENITIES SECTION — add/remove pills as needed
+                     ══════════════════════════════════════════════════════ -->
+                <div class="mb-8">
+                    <p class="section-label">Amenities</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="amenity-pill">2-Acre Central Greens</span>
+                        <span class="amenity-pill">Olympic Pool</span>
+                        <span class="amenity-pill">30,000 sq.ft Clubhouse</span>
+                        <span class="amenity-pill">Co-working Lounge</span>
+                        <span class="amenity-pill">Padel Tennis</span>
+                        <span class="amenity-pill">Yoga Pavilion</span>
+                        <span class="amenity-pill">EV Charging Bays</span>
+                        <span class="amenity-pill">24×7 Security</span>
+                    </div>
+                </div>
+
+                <!-- ══════════════════════════════════════════════════════
+                     ## FLOOR PLANS SECTION — add/remove cards per BHK type
+                     ══════════════════════════════════════════════════════ -->
+                <div class="mb-8">
+                    <p class="section-label">Floor Plans</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden custom-shadow lightbox-trigger" onclick="openLightbox(floorPlanImages, 0, floorPlanCaptions)">
+                            <div class="h-40 bg-gray-100">
+                                <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="2 BHK Floor Plan" loading="lazy">
+                            </div>
+                            <div class="p-4">
+                                <p class="text-sm font-bold mb-0.5">2 BHK</p>
+                                <p class="text-xs text-gray-400 font-medium">1150 – 1280 sq.ft</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden custom-shadow lightbox-trigger" onclick="openLightbox(floorPlanImages, 1, floorPlanCaptions)">
+                            <div class="h-40 bg-gray-100">
+                                <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="3 BHK Floor Plan" loading="lazy">
+                            </div>
+                            <div class="p-4">
+                                <p class="text-sm font-bold mb-0.5">3 BHK</p>
+                                <p class="text-xs text-gray-400 font-medium">1620 – 1810 sq.ft</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden custom-shadow lightbox-trigger" onclick="openLightbox(floorPlanImages, 2, floorPlanCaptions)">
+                            <div class="h-40 bg-gray-100">
+                                <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="4 BHK Floor Plan" loading="lazy">
+                            </div>
+                            <div class="p-4">
+                                <p class="text-sm font-bold mb-0.5">4 BHK</p>
+                                <p class="text-xs text-gray-400 font-medium">2240 – 2480 sq.ft</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ══════════════════════════════════════════════════════
+                     ## APPROVALS & DOCUMENTS SECTION — add/remove rows as needed
+                     ══════════════════════════════════════════════════════ -->
+                <div>
+                    <p class="section-label">Approvals & Documents</p>
+                    <div class="bg-white rounded-2xl border border-gray-100 custom-shadow divide-y divide-gray-50">
+                        <div class="flex items-center justify-between px-6 py-4">
+                            <span class="text-sm font-semibold text-gray-700">Masterplan</span>
+                            <a href="#" target="_blank" rel="noopener" class="text-xs font-bold bg-gray-50 hover:bg-black hover:text-white border border-gray-200 hover:border-black px-4 py-2 rounded-full transition-all">View</a>
+                        </div>
+                        <div class="flex items-center justify-between px-6 py-4">
+                            <span class="text-sm font-semibold text-gray-700">CLU Approval</span>
+                            <a href="#" target="_blank" rel="noopener" class="text-xs font-bold bg-gray-50 hover:bg-black hover:text-white border border-gray-200 hover:border-black px-4 py-2 rounded-full transition-all">View</a>
+                        </div>
+                        <div class="flex items-center justify-between px-6 py-4">
+                            <span class="text-sm font-semibold text-gray-700">RERA Certificate</span>
+                            <a href="#" target="_blank" rel="noopener" class="text-xs font-bold bg-gray-50 hover:bg-black hover:text-white border border-gray-200 hover:border-black px-4 py-2 rounded-full transition-all">View</a>
+                        </div>
+                        <div class="flex items-center justify-between px-6 py-4">
+                            <span class="text-sm font-semibold text-gray-700">Layout Plan</span>
+                            <a href="#" target="_blank" rel="noopener" class="text-xs font-bold bg-gray-50 hover:bg-black hover:text-white border border-gray-200 hover:border-black px-4 py-2 rounded-full transition-all">View</a>
+                        </div>
+                        <div class="flex items-center justify-between px-6 py-4">
+                            <span class="text-sm font-semibold text-gray-700">Environmental Clearance</span>
+                            <a href="#" target="_blank" rel="noopener" class="text-xs font-bold bg-gray-50 hover:bg-black hover:text-white border border-gray-200 hover:border-black px-4 py-2 rounded-full transition-all">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Details + Enquiry -->
+            <div class="lg:col-span-2">
+                <div class="lg:sticky lg:top-28 space-y-6">
+
+                    <!-- ══════════════════════════════════════════════════
+                         ## PROJECT FACTS CARD
+                         ══════════════════════════════════════════════════ -->
+                    <div class="bg-white rounded-[2rem] border border-gray-100 p-7 custom-shadow">
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">Godrej Properties</p>
+                        <h1 class="text-2xl font-bold mb-1">Godrej Aristocrat</h1>
+                        <p class="text-gray-400 text-sm mb-6 flex items-center gap-1 font-medium">📍 Sector 33, Mullanpur, New Chandigarh</p>
+
+                        <!-- BHK chips -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="amenity-pill">2 BHK</span>
+                            <span class="amenity-pill">3 BHK</span>
+                            <span class="amenity-pill">4 BHK</span>
+                        </div>
+
+                        <!-- Construction progress -->
+                        <div class="mb-6">
+                            <div class="flex justify-between text-[10px] font-semibold text-gray-400 mb-2">
+                                <span>Construction Progress</span><span>42%</span>
+                            </div>
+                            <div class="progress-track"><div class="progress-fill" style="width:42%"></div></div>
+                        </div>
+
+                        <!-- Info rows -->
+                        <div class="divide-y divide-gray-50">
+                            <div class="info-row"><span class="info-label">Price Range</span><span class="info-value">₹1.45 Cr – ₹3.2 Cr</span></div>
+                            <div class="info-row"><span class="info-label">Possession</span><span class="info-value">Dec 2027</span></div>
+                            <div class="info-row"><span class="info-label">Total Units</span><span class="info-value">480</span></div>
+                            <div class="info-row"><span class="info-label">Available</span><span class="info-value font-bold text-green-700">162 units</span></div>
+                            <div class="info-row"><span class="info-label">RERA No.</span><span class="info-value text-xs">PBRERA-SAS80-PR-0000-2025</span></div>
+                        </div>
+
+                        <!-- Listings link -->
+                        <a href="../listings.html?project=Godrej%20Aristocrat"
+                           class="mt-5 flex items-center justify-between w-full bg-gray-50 hover:bg-gray-100 border border-gray-200 hover:border-gray-300 px-5 py-3.5 rounded-2xl transition-all group">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">Available Inventory</p>
+                                <p class="text-sm font-bold text-black">See all listings under Godrej Aristocrat</p>
+                            </div>
+                            <div class="w-8 h-8 bg-white border border-gray-200 rounded-full flex items-center justify-center group-hover:bg-black group-hover:text-white group-hover:border-black transition-all flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- ══════════════════════════════════════════════════
+                         ## ENQUIRY FORM SECTION
+                         ══════════════════════════════════════════════════ -->
+                    <div class="bg-white rounded-[2rem] border border-gray-100 p-7 custom-shadow">
+                        <p class="section-label">Get in touch</p>
+                        <div class="flex items-center gap-3 mb-6 p-4 bg-gray-50 rounded-2xl">
+                            <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0">RG</div>
+                            <div>
+                                <p class="text-sm font-bold">Ramanpreet Gill</p>
+                                <p class="text-xs text-gray-400">New Projects Specialist · 8 yrs exp</p>
+                            </div>
+                        </div>
+                        <div id="enquiryForm">
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="form-label">Your Name</label>
+                                    <input type="text" id="eName" class="form-input" placeholder="e.g. Rajveer Singh">
+                                </div>
+                                <div>
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" id="ePhone" class="form-input" placeholder="+91 98xxx xxxxx">
+                                </div>
+                                <div>
+                                    <label class="form-label">Interested In</label>
+                                    <select id="eBHK" class="form-input">
+                                        <option value="">Select BHK</option>
+                                        <option>2 BHK</option>
+                                        <option>3 BHK</option>
+                                        <option>4 BHK</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="form-label">Message (optional)</label>
+                                    <textarea id="eMsg" class="form-input" rows="3" placeholder="Any specific requirements…"></textarea>
+                                </div>
+                            </div>
+                            <button onclick="submitEnquiry('+91 98140 55212')"
+                                id="eSubmit"
+                                class="mt-5 w-full bg-black text-white py-3.5 rounded-2xl text-sm font-bold hover:bg-zinc-800 transition-all">
+                                Request a Callback
+                            </button>
+                            <p class="text-center text-xs text-gray-400 mt-3">Or call directly: <a href="tel:+919814055212" class="font-bold text-black hover:underline">+91 98140 55212</a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         ## FOOTER — shared across site, links are relative (../)
+         ══════════════════════════════════════════════════════════════ -->
+    <footer class="border-t border-gray-100 pt-20 pb-10 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+            <div class="col-span-1">
+                <div class="flex items-center gap-2 font-bold text-xl mb-6">
+                    <div class="w-8 h-8 bg-black rounded-full flex items-center justify-center text-white text-xs">RN</div>
+                    Realnest
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed max-w-xs">The premium real estate destination for the Chandigarh Capital Region.</p>
+            </div>
+            <div>
+                <h4 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-8">CHANDIGARH</h4>
+                <ul class="space-y-4 text-sm font-medium text-gray-600">
+                    <li><a href="../index.html" class="hover:text-black">Sector 4–10 Villas</a></li>
+                    <li><a href="../index.html" class="hover:text-black">Sector 17 Commercial</a></li>
+                    <li><a href="../index.html" class="hover:text-black">New Chandigarh Plots</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-8">MOHALI</h4>
+                <ul class="space-y-4 text-sm font-medium text-gray-600">
+                    <li><a href="../index.html" class="hover:text-black">IT City Premium Plots</a></li>
+                    <li><a href="../index.html" class="hover:text-black">Sector 82 Apartments</a></li>
+                    <li><a href="../index.html" class="hover:text-black">Airport Road Projects</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-8">SUPPORT</h4>
+                <ul class="space-y-4 text-sm font-medium text-gray-600">
+                    <li><a href="../index.html" class="hover:text-black">Legal Verification</a></li>
+                    <li><a href="../index.html" class="hover:text-black">Home Loans</a></li>
+                    <li><a href="../index.html" class="hover:text-black">Contact Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 pt-10 border-t border-gray-50 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-gray-400 text-xs">©2025 Realnest. All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         ## LIGHTBOX — shared modal for gallery + floor plan images
+         ══════════════════════════════════════════════════════════════ -->
+    <div id="lightbox" onclick="lbBackdropClick(event)">
+        <div id="lbCaption"></div>
+        <button id="lbClose" onclick="closeLightbox()" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        <button id="lbPrev" class="lb-btn" onclick="lbNav(-1, event)" aria-label="Previous image">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <div id="lightboxImgWrap">
+            <img id="lightboxImg" src="" alt="" onclick="toggleZoom(event)">
+        </div>
+        <button id="lbNext" class="lb-btn" onclick="lbNav(1, event)" aria-label="Next image">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+        <div id="lbCounter"></div>
+    </div>
+
+    <script>
+    // ══════════════════════════════════════════════════════════════
+    //  ## IMAGE DATA — edit per project (keep gallery + floor plan
+    //  arrays in the same order as the thumbnails/cards above)
+    // ══════════════════════════════════════════════════════════════
+    const galleryImages = [
+        'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1200',
+        'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&q=80&w=1200',
+        'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=80&w=1200',
+        'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=1200'
+    ];
+    const galleryCaptions = ['Godrej Aristocrat photo 1', 'Godrej Aristocrat photo 2', 'Godrej Aristocrat photo 3', 'Godrej Aristocrat photo 4'];
+
+    const floorPlanImages = [
+        'https://images.unsplash.com/photo-1503174971373-b1f69850bded?auto=format&fit=crop&q=80&w=1400',
+        'https://images.unsplash.com/photo-1503174971373-b1f69850bded?auto=format&fit=crop&q=80&w=1400',
+        'https://images.unsplash.com/photo-1503174971373-b1f69850bded?auto=format&fit=crop&q=80&w=1400'
+    ];
+    const floorPlanCaptions = ['2 BHK — 1150 – 1280 sq.ft', '3 BHK — 1620 – 1810 sq.ft', '4 BHK — 2240 – 2480 sq.ft'];
+
+    let activeThumb = 0;
+
+    // ══════════════════════════════════════════════════════════════
+    //  LIGHTBOX — shared by main gallery + floor plans
+    // ══════════════════════════════════════════════════════════════
+    let lbImages = [];
+    let lbIndex = 0;
+
+    function openLightbox(images, startIndex, captions) {
+        lbImages = images;
+        lbCaptions = captions || [];
+        lbIndex = startIndex;
+        renderLightbox();
+        document.getElementById('lightbox').classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    let lbCaptions = [];
+
+    function renderLightbox() {
+        const img = document.getElementById('lightboxImg');
+        img.classList.remove('zoomed');
+        img.src = lbImages[lbIndex];
+        img.alt = lbCaptions[lbIndex] || '';
+        document.getElementById('lbCounter').textContent = `${lbIndex + 1} / ${lbImages.length}`;
+        document.getElementById('lbCaption').textContent = lbCaptions[lbIndex] || '';
+        document.getElementById('lbCaption').style.display = lbCaptions[lbIndex] ? 'block' : 'none';
+    }
+
+    function lbNav(dir, e) {
+        if (e) e.stopPropagation();
+        lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length; // loop
+        renderLightbox();
+    }
+
+    function toggleZoom(e) {
+        e.stopPropagation();
+        document.getElementById('lightboxImg').classList.toggle('zoomed');
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    function lbBackdropClick(e) {
+        if (e.target.id === 'lightbox') closeLightbox();
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (!document.getElementById('lightbox').classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') lbNav(-1);
+        if (e.key === 'ArrowRight') lbNav(1);
+    });
+
+    // ══════════════════════════════════════════════════════════════
+    //  GALLERY — swaps main image on thumbnail click
+    // ══════════════════════════════════════════════════════════════
+    function setMainImage(src, idx) {
+        const main = document.getElementById('mainImg');
+        if (main) main.src = src;
+        document.querySelectorAll('.gallery-thumb').forEach((el, i) => {
+            el.classList.toggle('active', i === idx);
+        });
+        activeThumb = idx;
+    }
+
+    // ══════════════════════════════════════════════════════════════
+    //  ENQUIRY FORM SUBMIT (placeholder — wire to backend later)
+    // ══════════════════════════════════════════════════════════════
+    function submitEnquiry(phone) {
+        const btn = document.getElementById('eSubmit');
+        const name = document.getElementById('eName').value.trim();
+        const ph   = document.getElementById('ePhone').value.trim();
+        if (!name || !ph) { alert('Please enter your name and phone number.'); return; }
+        btn.textContent = 'Sending…';
+        btn.classList.add('btn-submitting');
+        setTimeout(() => {
+            document.getElementById('enquiryForm').innerHTML = `
+                <div class="form-success">
+                    <div class="text-4xl mb-4">✅</div>
+                    <h3 class="text-lg font-bold mb-2">Request Sent!</h3>
+                    <p class="text-gray-400 text-sm">Our consultant will call you back within 2 hours.</p>
+                    <p class="text-xs text-gray-400 mt-4">Or reach us directly at <a href="tel:${phone.replace(/\s/g,'')}" class="font-bold text-black">${phone}</a></p>
+                </div>`;
+        }, 1200);
+    }
+    </script>
+</body>
+</html>
